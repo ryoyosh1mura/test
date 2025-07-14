@@ -1,3 +1,3 @@
-# TEST
+# LINK
 
-[テスト](src/sample.html)
+- [テスト](src/sample.html)
