@@ -1,3 +1,1 @@
-# LINK
-
-- [テスト](sample.html)
+README
