@@ -1,0 +1,41 @@
+/* @theme custom_uncover*/
+
+/*1280*720  or  960*720*/
+
+@import 'uncover';
+
+:root {
+  --fw: 0;
+  --bg-color: rgba(0,0,0,1);
+}
+
+/* スライドデザイン調整 */
+section {
+  background: rgb(178, 193, 202);
+}
+h1{
+  color: rgb(255,255,255);
+}
+
+/* 
+ページ番号設定(marp):https://github.com/marp-team/marp-core/blob/main/themes/uncover.scsshttps://github.com/marp-team/marp-core/blob/main/themes/uncover.scss
+ */
+section::after{
+  /* ↓これ */
+  color: rgb(255, 255, 255);
+  padding: 0px;
+}
+
+
+/* 段組みレイアウト */
+/* https://briboo-pc.hatenablog.jp/entry/2023/11/05/%E3%80%90Marp%E3%80%91%E3%82%B3%E3%83%94%E3%83%9A%E3%81%A7%E7%B0%A1%E5%8D%98%EF%BC%81%E5%A4%9A%E6%AE%B5%E7%B5%84%E3%81%BF%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6 */
+.flex{
+  display: flex;
+  gap: 0em;
+  border: 8px dashed rgb(196, 250, 97);
+}
+.fw > div{
+  flex: var(--fw);
+  background-color: var(--bg-color);
+  border: 8px dashed rgb(93, 0, 255);
+}
