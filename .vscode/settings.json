@@ -1,7 +1,0 @@
-{
-    "markdown.marp.themes": [
-        "test_theme.css",
-        "custom_uncover.css"
-    ],
-    "markdown.marp.html": "all"
-}
