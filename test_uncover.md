@@ -28,4 +28,8 @@ header: "aa"
 </div>
 
 ---
+# 吹き出し
+<p class="speechBubble right">aaa</p>
+
+---
 # 画像ボタン(css必要)

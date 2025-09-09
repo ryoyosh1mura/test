@@ -11,19 +11,18 @@
 
 /* スライドデザイン調整 */
 section {
-  background: rgb(178, 193, 202);
+  background: rgb(255, 255, 255);
 }
 h1{
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
 }
 
 /* 
 ページ番号設定(marp):https://github.com/marp-team/marp-core/blob/main/themes/uncover.scsshttps://github.com/marp-team/marp-core/blob/main/themes/uncover.scss
  */
 section::after{
-  /* ↓これ */
-  color: rgb(255, 255, 255);
-  padding: 0px;
+  color: rgb(0, 0, 0);
+  padding: 30px;
 }
 
 
@@ -38,4 +37,46 @@ section::after{
   flex: var(--fw);
   background-color: var(--bg-color);
   border: 8px dashed rgb(93, 0, 255);
+}
+
+
+/* 吹き出し */
+.speechBubble {
+  position: relative;
+  display: inline-block;
+  margin:0px 0px 0px 20px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background-color: #dedede;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.speechBubble::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  border-style: solid;
+  border-width: 12px 20px 12px 20px;
+  border-color: #000000;
+  /* left: 0; */
+  /* border-color: transparent #dedede transparent transparent; */
+  /* translate: -100% -50%; */
+
+  /* right: 0; */
+  /* border-color: transparent transparent transparent #000000; */
+  /* translate: 100% 50%; */
+}
+.speechBubble.left::after {
+  left: 0;
+  border-color: transparent #dedede transparent transparent;
+  transform: translateX(-100%);
+}
+
+.speechBubble.right::after{
+  right: 0;
+  border-color: transparent transparent transparent #dedede;
+  transform: translateX(100%);
 }
