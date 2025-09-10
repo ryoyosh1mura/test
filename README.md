@@ -1,4 +1,8 @@
-# !
-[html-image-popup](slide/popup.html)
+# マークダウンでできること調査
 
-![フリーイラスト](https://jp.freepik.com/icon/html-file_2786969#fromView=keyword&page=1&position=8&uuid=95ac8681-024c-4955-bac0-50cf6281b964)
+- [x] test : marpスライドテスト用
+- [x] slide: marpスライドあったらうれしい機能を実装
+    - [html-modal-window](slide/popup.html)
+
+- [ ] 
+- [ ] 
