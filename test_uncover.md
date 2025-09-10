@@ -29,7 +29,9 @@ header: "aa"
 
 ---
 # 吹き出し
+<p class="speechBubble left">aaa</p><br>
 <p class="speechBubble right">aaa</p>
 
 ---
-# 画像ボタン(css必要)
+# 画像をボタンっぽい挙動へ
+<img src="https://ryoyosh1mura.github.io/img/sample/setting.png" class="push">
