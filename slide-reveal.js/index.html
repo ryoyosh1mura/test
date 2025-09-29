@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/my-custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,22 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>speaker notes</h2>
+					<aside class="notes">
+						Shhh, these are your private notes 📝
+					</aside>
+				</section>
+				
+				<section class="with-footer">
+					<h2>htmlファイルの埋め込み</h2>
+					<div id="sub-container"></div>
+				</section>
+
+				<section>
+					<h2>スライドデザイン適用</h2>
+				</section>
+				<div class="footer">© My Footer</div>
 			</div>
 		</div>
 
@@ -35,6 +50,23 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+		</script>
+		<script>
+			// htmlファイル埋め込み
+			fetch("sub.html")
+			.then(res => res.text())
+			.then(html => {
+				document.getElementById("sub-container").innerHTML = html;
+			});
+const footer = document.querySelector('.footer');
+
+Reveal.on('slidechanged', event => {
+  if (event.currentSlide.classList.contains('with-footer')) {
+    footer.style.display = 'block';
+  } else {
+    footer.style.display = 'none';
+  }
+});
 		</script>
 	</body>
 </html>
