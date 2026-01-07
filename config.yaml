@@ -1,0 +1,9 @@
+name: example-sdk
+identifier: com.example.sdk
+version: 0.1.0
+
+# SDK成果物がある場所
+source: ./sdk
+
+# インストール先（絶対パス）
+install_root: /Library/Developer/hogeCompany/hogeSDK
